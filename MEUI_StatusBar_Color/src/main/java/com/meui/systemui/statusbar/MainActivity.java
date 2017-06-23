@@ -3,7 +3,7 @@ package com.meui.systemui.statusbar;
 import android.app.*;
 import android.os.*;
 
-public class MainActivity extends Activity 
+public final class MainActivity extends Activity 
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)

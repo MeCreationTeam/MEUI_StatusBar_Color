@@ -17,4 +17,7 @@
         </activity>
     </application>
 
+		<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+<uses-permission android:name="com.meui.RomCtrl.READ"/>
+<uses-permission android:name="android.permission.GET_TASKS"/>
 </manifest>

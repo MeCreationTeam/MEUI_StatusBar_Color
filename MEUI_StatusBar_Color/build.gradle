@@ -8,8 +8,8 @@ android {
         applicationId "com.meui.systemui.statusbar"
         minSdkVersion 9
         targetSdkVersion 21
-        versionCode 1
-        versionName "Initial"
+        versionCode 2
+        versionName "Beta"
     }
     buildTypes {
         release {
