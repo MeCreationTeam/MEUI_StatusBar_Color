@@ -60,16 +60,17 @@ public class StatusBarView extends FrameLayout
 		final String foregroundTaskPackageName = foregroundTaskInfo.topActivity.getPackageName();
 		final String where="packageName=\""+foregroundTaskPackageName+"\"";
 		final Cursor mCursor=resolver.query(CONTENT_URI,null,where,null,null);
-		if(mCursor.moveToFirst()){
+		if(mCursor!=null && mCursor.moveToFirst()){
 			final boolean hasColor=mCursor.getInt(mCursor.getColumnIndex("hasColor"))==1;
 			final int color;
 			if(hasColor){
 				color=mCursor.getInt(mCursor.getColumnIndex("color"));
 			}else color=mDefaultColor;
 			this.setBackgroundColor(color);
+			mCursor.close();
+			
 		}else setBackgroundColor(mDefaultColor);
-		
-		 //Toast.makeText(mContext,foregroundTaskPackageName+mDelay,Toast.LENGTH_SHORT).show();
+	     //Toast.makeText(mContext,foregroundTaskPackageName+mDelay,Toast.LENGTH_SHORT).show();
 		 return mDelay;
 	}
 
